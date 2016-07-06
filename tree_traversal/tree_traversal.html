@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>tree_traversal</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+
+    </script>
+  </head>
+  <body>
+    <h1 id="title">tree_traversal</h1>
+
+    <p class="paragraph">Paragraph text 1</p>
+    <p class="paragraph">Paragraph text 2</p>
+
+    <input type="text"></input>
+    <button>add</button>
+    <button>remove</button>
+
+    <ul>
+      <li>List element 1</li>
+      <li>List element 2</li>
+      <li>List element 3</li>
+      <li>List element 4</li>
+      <li>List element 5</li>
+    </ul>
+
+    <script>
+      $('li:first').parentsUntil('body').css('outline', '1px solid red');
+
+    </script>
+  </body>
+</html>
