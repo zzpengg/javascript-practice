@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>function calculate</title>
+    <script type="text/javascript">
+        var resultElement;
+
+        function setDefaultText(){
+          var i;
+          for(i=0;i<resultElement.length;i++){
+            var element = resultElement[i];
+            element.innerText = element.getAttribute('function') + "(x) = ";
+          }
+
+        }
+
+        window.onload = function(){
+          resultElement = document.getElementsByClassName('result');
+          setDefaultText();
+        };
+
+    </script>
+  </head>
+  <body>
+    <h1>Function calculator</h1>
+
+    x = <input type="text" id="userInput"></input>
+    <button id="btnCalculate">Calculate</button>
+
+    <br>
+    <br>
+
+    <p class="result" function="sin"></p>
+    <p class="result" function="cos"></p>
+
+
+  </body>
+</html>
