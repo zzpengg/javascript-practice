@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>dom_tree</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+
+    </script>
+  </head>
+  <body>
+    <h1 id="title">dom_tree</h1>
+
+    <p class="paragraph">Paragraph text 1</p>
+    <p class="paragraph">Paragraph text 2</p>
+
+    <input type="text"></input>
+    <button onclick="addLi()">add</button>
+    <button onclick="removeLi()">remove</button>
+
+    <ul>
+      <li>List element 1</li>
+      <li>List element 2</li>
+      <li>List element 3</li>
+      <li>List element 4</li>
+      <li>List element 5</li>
+    </ul>
+
+    <script>
+      function addLi() {
+        var count = $('ul').children().length + 1;
+        var txt = "List element " + count ;
+        var newLi = $('<li></li>').text(txt);
+        $('ul').append(newLi);
+      }
+
+      function removeLi() {
+        if($('ul').children().length == 0){
+          return;
+        }
+
+        $('ul li:last').remove();
+
+      }
+    </script>
+  </body>
+</html>
