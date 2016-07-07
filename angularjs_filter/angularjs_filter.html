@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>filter</title>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js" charset="utf-8"></script>
+    <script src="app.js"></script>
+  </head>
+  <body ng-app="app" ng-controller="MainController as main">
+    <h2>Contact List</h2>
+    <hr>
+    <div ng-repeat="item in main.items">
+      <table>
+        <tr>
+          <td>{{item.name | lowercase}}</td>
+          <td>{{item.price | currency}}</td>
+        </tr>
+      </table>
+
+    </div>
+
+  </body>
+</html>
